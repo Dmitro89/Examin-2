@@ -1,0 +1,268 @@
+@import "normalize";
+@import "variables";
+@import "mixin";
+@import "grid";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+// font-family: 'Open Sans', sans-serif;
+//font-family: 'Source Sans Pro', sans-serif;
+
+*, *:after, *:before{
+	@include box-sizing;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;;
+	color: $font-color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+
+//slide-1 
+.bo-container{
+    background: url(../img/header-bg.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.bo-row{
+    padding-bottom: 673px;
+    .bo-top-fixed{
+        position: fixed;
+        z-index: 5;
+        background: grey;
+        opacity: 0.5;
+         &:hover{
+            opacity: 1;
+            }
+        .bo-logo{
+            margin: 30px 0 10px 50px;
+            width: 10%;
+            padding: 10px;
+            &:hover{
+                background: green;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.bo-menu{
+    float: right;
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 0.75;
+    ul li{
+        display: inline-block;        
+        a{
+            color: #ffffff;
+            padding: 10px 15px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            border-style: none;
+            
+            &:hover{
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transition: all 0.1s ease;
+            }
+            &:focus,
+            &:active{
+                color: yellowgreen;  
+            }
+        }
+    }
+}
+
+.bo-center-info{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    text-align: center;
+    color: #ffffff;
+    .bo__center__caption{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 35px;
+        font-weight: 300;
+        letter-spacing: 7px;
+        line-height: 2;
+        text-transform: uppercase;
+    }
+    .bo__center__text{
+        font-size: 16px;
+        line-height: 1.75;
+    }
+}
+
+.bo-next-page{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    &:hover,
+    &:active,
+    &:focus{
+        opacity: 0.5;
+    }
+}
+
+
+//slide -2
+.bo-sl2{
+    background: #edebeb;
+}
+.grid-item-size,
+.grid-item{
+    width: 20%;
+        img{
+            padding-top: 10px;
+        }
+}
+
+.bo-sl2-info{
+    padding-top: 30px;
+    text-align: center;
+    .bo-sl2-caption{
+        font-family: 'Source Sans Pro';
+        color: #333b46;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        line-height: 0.6;
+    }
+    .bo-sl2-text{
+        padding-bottom: 30px;
+        font-family: OpenSans;
+        color: #81868e;
+        line-height: 1.78;
+    }
+}
+
+.bo-sl2-btn{
+    text-align: center;
+    padding-bottom: 30px;
+
+    .button{
+        padding: 5px;
+        font-family: OpenSans;
+        color: #464646;
+        font-size: 16px; 
+        line-height: 12px; 
+        border: none;
+        background: transparent;
+        &:hover{
+            border-bottom: 1px solid #19bd9a;
+            opacity: 0.8; 
+        }
+        &:active,
+        &:focus{
+           outline: none;
+           color: red;
+        }
+    }
+}
+
+
+//Slide-3
+.bo-sl3-info{
+
+    padding-top: 30px;
+    text-align: center;
+    .bo-sl3-caption{
+        font-family: 'Source Sans Pro';
+        color: #333b46;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        line-height: 0.6;
+        text-transform: uppercase;
+    }
+    .bo-sl3-text{
+        font-family: OpenSans;
+        color: #81868e;
+        font-size: 14px; 
+        line-height: 1.78;
+        padding-bottom: 20px;
+       
+    }
+}
+
+.bo-slide-show-1{
+    margin: 0 100px;
+    padding-bottom: 50px;
+}
+
+.bo-slide-show-1-info{
+    float: right;
+    text-align: right;
+    line-height: 1.78;
+    .bo__slide__show-1__name{
+        color: #464646;
+        font-size: 20px;
+        margin: 0;
+    }
+    .bo__slide__show-1__dir{
+        font-family: 'Source Sans Pro';
+        color: #81868e;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+    }
+    .bo__slide__show-1__text{
+        color: #81868e;
+    }
+}
+
+.bo-slide-show{
+	position: relative;
+    overflow: hidden;
+}
+
+.slick-arrow{
+	font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 45%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: url(../img/arrow2.png);
+    z-index: 5;
+
+    &.slick-next{
+    	position: absolute;
+    	right: 20px;
+	}
+
+	&.slick-prev{
+		position: absolute;
+		left: 20px;
+		margin-top: -25px;
+		transform: rotate(180deg);
+	}
+
+	&:hover,
+	&:focus{
+		opacity: .5;
+	}
+}
+
+
+// #map{
+//     min-height: 600px;
+// }
